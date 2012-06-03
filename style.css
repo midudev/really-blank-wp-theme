@@ -1,0 +1,29 @@
+/*
+Theme Name: Grupo Puchades
+Theme URI: http://miduga.es
+Description: 
+Version: 1.0
+Tags: two column, white
+Author: miduga
+Author URI: http://miduga.es
+*/
+
+body {
+	background: #97b4de url('img/fondo.png') repeat-x 0px 0px; 
+	font-family: Arial;
+	width: 880px;  
+	margin: 0 auto;
+}
+
+a:link, a:visited, a:active {       				
+	text-decoration: none;
+	color: #0071e3;
+}
+
+a:hover {       		
+	text-decoration: underline;
+}
+
+p {
+	line-height: 150%;
+}
