@@ -1,19 +1,19 @@
-<?php get_header(); ?>
+<? get_header(); ?>
 
-	<?php if (have_posts()) : ?>
+	<? if (have_posts()) : ?>
 
         	<article>
 
-           		<h1><?php the_title(); ?></h1>
+           		<h1><? the_title(); ?></h1>
 
-            	<?php the_content(); ?>
+            	<? the_content(); ?>
 
     		</article>
 
-    <?php endif; ?>
+    <? endif; ?>
 
-    <p><?php the_tags(); ?></p>
+    <p><? the_tags(); ?></p>
 
-<?php get_sidebar(); ?>
+<? get_sidebar(); ?>
 
-<?php get_footer(); ?>
+<? get_footer(); ?>

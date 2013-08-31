@@ -1,7 +1,7 @@
-<?php get_header() ?>
+<? get_header() ?>
 
 	<h1>404 Error</h1>
  
-<?php get_sidebar() ?>
+<? get_sidebar() ?>
 
-<?php get_footer() ?>
+<? get_footer() ?>

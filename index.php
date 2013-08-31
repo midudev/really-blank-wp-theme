@@ -1,23 +1,23 @@
-<?php get_header(); ?>
+<? get_header(); ?>
 
-	<?php if (have_posts()) : ?>
+	<? if (have_posts()) : ?>
     
-        <?php while (have_posts()) : the_post(); ?>
+        <? while (have_posts()) : the_post(); ?>
 
         	<article>  
         
-            	<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+            	<h2><a href="<? the_permalink() ?>"><? the_title(); ?></a></h2>
             	
-            	<?php the_excerpt(); ?>
+            	<? the_excerpt(); ?>
 
         	</article>
             
-        <?php endwhile; ?>
+        <? endwhile; ?>
     
-    <?php endif; ?>
+    <? endif; ?>
     
-    <?php posts_nav_link(); ?>  
+    <? posts_nav_link(); ?>  
 
-<?php get_sidebar(); ?>
+<? get_sidebar(); ?>
 
-<?php get_footer(); ?>
+<? get_footer(); ?>
