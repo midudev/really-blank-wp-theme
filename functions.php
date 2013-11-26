@@ -26,8 +26,3 @@ if ( function_exists('register_sidebar') )
         'after_widget' => ''
     )
 );
-
-// Remove Wordpress and Plugins updates
-add_filter( 'pre_site_transient_update_core', create_function( '$a', "return null;" ) );
-remove_action( 'load-update-core.php', 'wp_update_plugins' );
-add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );s
