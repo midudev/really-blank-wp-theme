@@ -1,19 +1,24 @@
-<? get_header(); ?>
+<? get_header() ?>
 
-	<? if (have_posts()) : ?>
+	<? if ( have_posts() ) : the_post() ?>
 
-        	<article>
+    <article class="article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
 
-           		<h1><? the_title(); ?></h1>
+     	<h1 class="article_title" itemprop="name"><? the_title(); ?></h1>
 
-            	<? the_content(); ?>
+      <header class="article_meta">
+        <time datetime="<? the_date() ?>" itemprop="datePublished"><? date_post() ?></time>
+        <span itemprop="articleSection"><? the_tags( '', ' · ', '' ) ?></span>
+      </header>
 
-    		</article>
+      <section class="article_content" itemprop="description">
+      	<? the_content(); ?>
+      </section>
+
+    </article>
 
     <? endif; ?>
 
-    <p><? the_tags(); ?></p>
+<? get_sidebar() ?>
 
-<? get_sidebar(); ?>
-
-<? get_footer(); ?>
+<? get_footer() ?>
