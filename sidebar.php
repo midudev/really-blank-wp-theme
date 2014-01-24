@@ -1,3 +1,3 @@
 <aside>
-   <? dynamic_sidebar( 'Right Sidebar' ) ?>
+  <? dynamic_sidebar( 'Right Sidebar' ) ?>
 </aside>
