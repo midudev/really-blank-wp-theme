@@ -1,22 +1,20 @@
 <? get_header(); ?>
 
 <? if (have_posts()) : ?>
-  
-  <? while (have_posts()) : the_post(); ?>
 
-    <article>  
-      
-    	<h2><a href="<? the_permalink() ?>"><? the_title(); ?></a></h2>
-    	<? the_excerpt(); ?>
+  <? while (have_posts()) : the_post() ?>
 
-    </article>
-          
-  <? endwhile; ?>
-  
-<? endif; ?>
-  
-<? posts_nav_link(); ?>  
+  <article>
 
-<? get_sidebar(); ?>
+  <h2><a href="<? the_permalink() ?>"><? the_title() ?></a></h2>
+  <? the_excerpt() ?>
 
-<? get_footer(); ?>
+  </article>
+
+  <? endwhile ?>
+
+<? endif ?>
+
+<? posts_nav_link() ?>
+<? get_sidebar() ?>
+<? get_footer() ?>
