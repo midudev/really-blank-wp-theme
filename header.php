@@ -9,4 +9,4 @@
 
 <body>
   <a href="<?= get_option( 'home' ) ?>"><? bloginfo( 'name' ) ?></a>
-  <main id="content" role="main">
+  <main id="main" role="main">

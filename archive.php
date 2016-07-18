@@ -1,23 +1,25 @@
 <? get_header() ?>
-   
+
 <? if ( have_posts() ) : ?>
 
   <? if ( is_category() ) : ?>
 
-    <h1 class="titulo_categoria"><? _e( 'Entradas de la categoría', 'theme' ) ?> <? single_cat_title() ?></h1>
+    <? $title = _e( 'Entradas de la categoría', 'theme' ) . ' ' . single_cat_title(); ?>
 
   <? elseif ( is_tag() ) : ?>
 
-    <h1 class="titulo_categoria"><? _e( 'Entradas de la etiqueta', 'theme' ) ?> <? single_tag_title() ?></h1>
+    <? $title = _e( 'Entradas de la etiqueta', 'theme' ) . ' ' . single_tag_title() ?>
 
   <? else : ?>
 
-    <h1 class="titulo_categoria"><? _e( 'Entradas del archivo', 'theme' ) ?> <? the_time('F Y') ?></h1>
+    <? $title = _e( 'Entradas del archivo', 'theme' ) . ' ' .  the_time('F Y') ?>
 
   <? endif; ?>
 
+  <h1 class='category-title'><?= $title ?></h1>
+
   <section id="blog_list" class="clearfix">
-  
+
     <? while (have_posts()) : the_post(); ?>
 
       <a href="<? the_permalink() ?>" class="post">
@@ -32,7 +34,7 @@
     <? endwhile; ?>
 
   </section>
-    
+
 <? endif; ?>
 
 <div class="navigation clearfix">

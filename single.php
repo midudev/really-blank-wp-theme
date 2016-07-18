@@ -4,16 +4,16 @@
 
     <article class="article" itemscope="" itemtype="http://schema.org/BlogPosting" role="article">
 
-      <h1 class="article_title" itemprop="name"><? the_title(); ?></h1>
+      <h1 class="article-title" itemprop="name"><? the_title(); ?></h1>
 
-      <header class="article_meta">
+      <header class="article-meta">
         <time datetime="<? the_date() ?>" itemprop="datePublished">
           <? date_post() ?>
         </time>
-        <span itemprop="articleSection"><? the_tags( '', ' · ', '' ) ?></span>
+        <span itemprop="article-section"><? the_tags( '', ' · ', '' ) ?></span>
       </header>
 
-      <section class="article_content" itemprop="description">
+      <section class="article-content" itemprop="description">
       	<? the_content(); ?>
       </section>
 

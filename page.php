@@ -1,23 +1,23 @@
-<? get_header(); ?>
+<? get_header() ?>
 
 <? if (have_posts()) : ?>
-  
-<? while (have_posts()) : the_post(); ?>
 
-	<article>
+  <? while (have_posts()) : the_post() ?>
 
-    <h1><? the_title(); ?></h1>
-      
-    <? the_content(); ?>
+  	<article>
 
-		</article>
+      <h1><? the_title() ?></h1>
 
-<? endwhile; ?>
+      <? the_content() ?>
 
-<? endif; ?>
+  		</article>
 
-<p><? the_tags(); ?></p>
- 
-<? get_sidebar(); ?>
+  <? endwhile ?>
 
-<? get_footer(); ?>
+<? endif ?>
+
+<p><? the_tags() ?></p>
+
+<? get_sidebar() ?>
+
+<? get_footer() ?>
